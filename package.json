@@ -1,0 +1,27 @@
+{
+  "name": "lunch-delivery-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web API for the Send Duan Mue Thiang lunch delivery project",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env ./node_modules/ts-node-dev/lib/bin.js --respawn --transpile-only server.ts",
+    "build": "tsc",
+    "start": "node --env-file-if-exists=.env dist/server.js",
+    "db:init": "npm run build && node --env-file-if-exists=.env dist/scripts/init-db.js"
+  },
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "@tursodatabase/serverless": "^1.4.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
